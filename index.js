@@ -97,11 +97,31 @@ app.post('/signin', (req, res) => {
 
 
 app.get('/questions', (req, res) => {
-    res.send('Hello from questions')
+
+    return res.status(200).json({ questions });
+
+})
+
+app.post('/questions', (req, res) => {
+
+
+    // verify the credentials, validate the user, push the new question.
+
+    questions.push({
+        title: 'New question',
+        description: 'Answer the following question',
+        testCases: {
+            input: [1, 2, 4, 5, 23, ,5, 5],
+            output: 3
+        }
+
+    })
+
+
 })
 
 app.get('/submissions', (req, res) => {
-    res.send("Hello from submissions")
+    return res.status(200).json({ submissions });
 })
 
 app.listen(port, () => {
