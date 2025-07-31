@@ -2,6 +2,10 @@
 
 A simple Express.js app with in-memory signup and login routes. Created as a learning exercise to understand backend basics and authentication flow.
 
+## Status
+
+For learning purposes only — no database or password hashing yet.
+
 ## Features
 
 - `/signup` route to create users
